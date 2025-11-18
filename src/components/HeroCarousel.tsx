@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import { useCallback, useEffect, useState } from "react";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
@@ -29,11 +28,19 @@ const slides = [
 ];
 
 const HeroCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, duration: 30 },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })]
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // Auto-advance slides
+  useEffect(() => {
+    if (!emblaApi) return;
+    
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
