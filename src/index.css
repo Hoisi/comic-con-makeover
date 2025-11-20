@@ -8,49 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 45 20% 96%;
-    --foreground: 160 25% 15%;
+    --background: 190 100% 97%;
+    --foreground: 195 100% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 160 25% 15%;
+    --card: 180 100% 99%;
+    --card-foreground: 195 100% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 160 25% 15%;
+    --popover: 180 100% 99%;
+    --popover-foreground: 195 100% 10%;
 
-    --primary: 160 45% 25%;
-    --primary-foreground: 45 20% 96%;
+    --primary: 184 77% 34%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 15 65% 60%;
+    --secondary: 340 82% 67%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 45 15% 88%;
-    --muted-foreground: 160 15% 45%;
+    --muted: 184 30% 90%;
+    --muted-foreground: 184 15% 40%;
 
-    --accent: 185 65% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 95% 60%;
+    --accent-foreground: 195 100% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 45 15% 85%;
-    --input: 45 15% 85%;
-    --ring: 160 45% 25%;
+    --border: 184 40% 85%;
+    --input: 184 40% 85%;
+    --ring: 184 77% 34%;
 
     --radius: 0.75rem;
 
-    /* Custom brand colors */
-    --forest: 160 45% 20%;
-    --forest-light: 160 35% 30%;
-    --terracotta: 15 65% 60%;
-    --terracotta-dark: 15 65% 50%;
-    --teal: 185 65% 45%;
-    --teal-light: 185 55% 55%;
-    --navy: 235 45% 30%;
-    --cream: 45 20% 96%;
+    /* Custom brand colors - Tropical theme */
+    --forest: 158 64% 52%;
+    --forest-light: 158 50% 65%;
+    --terracotta: 340 82% 67%;
+    --terracotta-dark: 340 82% 55%;
+    --teal: 184 77% 34%;
+    --teal-light: 184 65% 50%;
+    --navy: 210 100% 20%;
+    --cream: 45 70% 92%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--terracotta)) 0%, hsl(var(--terracotta-dark)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--teal-light)) 100%);
+    /* Gradients - Tropical */
+    --gradient-hero: linear-gradient(135deg, hsl(184, 77%, 34%) 0%, hsl(158, 64%, 52%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(340, 82%, 67%) 0%, hsl(45, 95%, 60%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -59,33 +59,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 160 25% 10%;
-    --foreground: 45 20% 96%;
+    --background: 195 50% 8%;
+    --foreground: 180 100% 95%;
 
-    --card: 160 20% 15%;
-    --card-foreground: 45 20% 96%;
+    --card: 195 45% 12%;
+    --card-foreground: 180 100% 95%;
 
-    --popover: 160 20% 15%;
-    --popover-foreground: 45 20% 96%;
+    --popover: 195 45% 12%;
+    --popover-foreground: 180 100% 95%;
 
-    --primary: 185 55% 55%;
-    --primary-foreground: 160 25% 10%;
+    --primary: 184 77% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 15 65% 60%;
+    --secondary: 340 75% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 160 15% 20%;
-    --muted-foreground: 45 15% 70%;
+    --muted: 195 30% 20%;
+    --muted-foreground: 184 20% 70%;
 
-    --accent: 185 65% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 90% 55%;
+    --accent-foreground: 195 50% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 160 15% 25%;
-    --input: 160 15% 25%;
-    --ring: 185 55% 55%;
+    --border: 195 30% 20%;
+    --input: 195 30% 20%;
+    --ring: 184 77% 45%;
   }
 }
 
