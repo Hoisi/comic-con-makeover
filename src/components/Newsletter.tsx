@@ -3,8 +3,9 @@ import { Input } from "@/components/ui/input";
 
 const Newsletter = () => {
   return (
-    <section className="py-20 bg-navy">
-      <div className="container">
+    <section className="relative py-20 bg-navy overflow-hidden">
+      <div className="absolute inset-0 bg-tropical-waves opacity-40"></div>
+      <div className="container relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Stay in the Loop!

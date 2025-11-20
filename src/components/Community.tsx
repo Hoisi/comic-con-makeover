@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 
 const Community = () => {
   return (
-    <section className="py-12 bg-forest">
-      <div className="container">
+    <section className="relative py-12 bg-forest overflow-hidden">
+      <div className="absolute inset-0 bg-tropical-flowers opacity-30"></div>
+      <div className="container relative z-10">
         <div className="max-w-6xl mx-auto bg-terracotta rounded-lg overflow-hidden">
           <div className="flex items-center flex-col md:flex-row">
             {/* Mascot Image Section */}
