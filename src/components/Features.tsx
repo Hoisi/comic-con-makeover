@@ -25,8 +25,9 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 bg-forest">
-      <div className="container">
+    <section className="relative py-20 bg-forest overflow-hidden">
+      <div className="absolute inset-0 bg-tropical-leaves opacity-40"></div>
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
