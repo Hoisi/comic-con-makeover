@@ -20,7 +20,7 @@ const CustomOrders = () => {
       dragFree: true,
       containScroll: false,
     },
-    [Autoplay({ delay: 0, stopOnInteraction: false })]
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
   );
 
   return (
