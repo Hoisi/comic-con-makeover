@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import ParallaxLayer from "@/components/ParallaxLayer";
 
 const Newsletter = () => {
   return (
     <section className="relative py-12 md:py-20 bg-navy overflow-hidden">
-      <ParallaxLayer speed={0.3} className="absolute inset-0 bg-tropical-waves opacity-50" />
+      <div className="absolute inset-0 bg-tropical-waves opacity-50"></div>
       <div className="container relative z-10 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
