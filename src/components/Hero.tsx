@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import ParallaxLayer from "@/components/ParallaxLayer";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-hero">
-      <ParallaxLayer speed={0.3} className="absolute inset-0 bg-tropical-leaves opacity-50" />
-      <ParallaxLayer speed={0.5} className="absolute inset-0 bg-tropical-waves opacity-30" />
+      <div className="absolute inset-0 bg-tropical-leaves opacity-50"></div>
+      <div className="absolute inset-0 bg-tropical-waves opacity-30"></div>
       
       <div className="container relative z-10 text-center px-4">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
