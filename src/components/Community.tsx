@@ -2,8 +2,18 @@ import { Button } from "@/components/ui/button";
 
 const Community = () => {
   return (
-    <section className="relative py-12 bg-forest overflow-hidden">
-      <div className="absolute inset-0 bg-tropical-flowers opacity-30"></div>
+    <section className="relative py-12 overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-90"
+        style={{
+          backgroundImage: 'url(/images/tropical-pattern.jpg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat',
+          backgroundSize: 'auto'
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/80"></div>
       <div className="container relative z-10">
         <div className="max-w-6xl mx-auto bg-terracotta rounded-lg overflow-hidden">
           <div className="flex items-center flex-col md:flex-row">
