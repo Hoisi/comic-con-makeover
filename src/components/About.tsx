@@ -8,7 +8,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Image */}
           <div className="relative">
-            <div className="aspect-square rounded-lg overflow-hidden shadow-lg">
+            <div className="aspect-square rounded-lg overflow-hidden">
               <img
                 src={aboutMascot}
                 alt="Hyde Hermit Studio Mascot"
@@ -40,7 +40,7 @@ const About = () => {
               </p>
             </div>
             <div className="mt-8">
-              <Button variant="hero" size="lg" className="bg-white text-teal hover:bg-white/90">
+              <Button variant="hero" size="lg" className="bg-white text-teal hover:bg-white/90 shadow-none hover:shadow-none">
                 Learn More About Us
               </Button>
             </div>
