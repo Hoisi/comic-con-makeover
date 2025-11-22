@@ -6,6 +6,7 @@ import Products from "@/components/Products";
 import CustomOrders from "@/components/CustomOrders";
 import Community from "@/components/Community";
 import About from "@/components/About";
+import InstagramFeed from "@/components/InstagramFeed";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <CustomOrders />
       <Community />
       <About />
+      <InstagramFeed />
       <Newsletter />
       <Footer />
     </div>
