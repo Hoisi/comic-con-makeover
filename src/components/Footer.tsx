@@ -89,28 +89,58 @@ const Footer = () => {
               <p className="text-white/60 text-sm mb-3">We Accept</p>
               <div className="flex flex-wrap gap-2">
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#016FD0"/>
+                    <path d="M15 12h4v8h-4z" fill="white"/>
+                    <path d="M20 12h4v8h-4z" fill="white"/>
+                    <path d="M25 12h4v8h-4z" fill="white"/>
+                    <path d="M30 12h4v8h-4z" fill="white"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#1434CB"/>
+                    <path d="M20 12l-6 8h12l6-8z" fill="#FFA200"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#00579F"/>
+                    <path d="M18 16a6 6 0 1 1 12 0 6 6 0 0 1-12 0z" fill="#FAA61A"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#EB001B"/>
+                    <circle cx="18" cy="16" r="6" fill="#EB001B"/>
+                    <circle cx="30" cy="16" r="6" fill="#F79E1B"/>
+                    <path d="M24 10a6 6 0 0 0 0 12 6 6 0 0 0 0-12z" fill="#FF5F00"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Apple_Pay_logo.svg" alt="Apple Pay" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#000000"/>
+                    <path d="M24 10l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" fill="white"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#5A31F4"/>
+                    <path d="M20 16l4-4v8l-4-4zm8-4v8l4-4-4-4z" fill="white"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Amazon_Pay_logo.svg/320px-Amazon_Pay_logo.svg.png" alt="Amazon Pay" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#FF9900"/>
+                    <path d="M18 12c2 2 2 5 0 8-2-2-2-6 0-8zm6 0c2 2 2 5 0 8-2-2-2-6 0-8zm6 0c2 2 2 5 0 8-2-2-2-6 0-8z" fill="#000000"/>
+                  </svg>
                 </div>
                 <div className="bg-white rounded p-1.5 h-7 w-11 flex items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Discover_Card_logo.svg" alt="Discover" className="h-4 w-auto" />
+                  <svg viewBox="0 0 48 32" className="h-4 w-auto">
+                    <rect width="48" height="32" rx="4" fill="#5469D4"/>
+                    <circle cx="18" cy="16" r="4" fill="white"/>
+                    <circle cx="30" cy="16" r="4" fill="#5469D4" stroke="white" strokeWidth="2"/>
+                  </svg>
                 </div>
               </div>
             </div>
