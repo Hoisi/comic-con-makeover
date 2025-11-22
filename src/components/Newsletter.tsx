@@ -3,8 +3,18 @@ import { Input } from "@/components/ui/input";
 
 const Newsletter = () => {
   return (
-    <section className="relative py-12 md:py-20 bg-navy overflow-hidden">
-      <div className="absolute inset-0 bg-tropical-waves opacity-50"></div>
+    <section className="relative py-12 md:py-20 overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-90"
+        style={{
+          backgroundImage: 'url(/images/crab-pattern.jpg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat',
+          backgroundSize: 'auto'
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/70 to-navy/90"></div>
       <div className="container relative z-10 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
