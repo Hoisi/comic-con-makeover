@@ -14,7 +14,18 @@ const InstagramFeed = () => {
   ];
 
   return (
-    <section className="relative py-16 bg-background overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-90"
+        style={{
+          backgroundImage: 'url(/images/palm-pattern.jpg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat',
+          backgroundSize: 'auto'
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background/80"></div>
       <div className="container relative z-10">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
