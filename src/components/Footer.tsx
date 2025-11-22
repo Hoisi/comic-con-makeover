@@ -83,8 +83,39 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 text-center text-white/60">
-          <p>&copy; {new Date().getFullYear()} Hyde Hermit Studio. All rights reserved.</p>
+        <div className="border-t border-white/20 pt-8">
+          <div className="flex flex-col items-center gap-6">
+            <div className="text-center">
+              <p className="text-white/60 text-sm mb-4">We Accept</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Apple_Pay_logo.svg" alt="Apple Pay" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Amazon_Pay_logo.svg/320px-Amazon_Pay_logo.svg.png" alt="Amazon Pay" className="h-6 w-auto" />
+                </div>
+                <div className="bg-white rounded p-2 h-10 w-14 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Discover_Card_logo.svg" alt="Discover" className="h-6 w-auto" />
+                </div>
+              </div>
+            </div>
+            <p className="text-white/60 text-center">&copy; {new Date().getFullYear()} Hyde Hermit Studio. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
