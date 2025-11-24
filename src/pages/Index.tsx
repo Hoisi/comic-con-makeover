@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
 import Features from "@/components/Features";
 import Products from "@/components/Products";
+import GoogleAds from "@/components/GoogleAds";
 import CustomOrders from "@/components/CustomOrders";
 import Community from "@/components/Community";
 import About from "@/components/About";
@@ -16,6 +17,7 @@ const Index = () => {
       <HeroCarousel />
       <Features />
       <Products />
+      <GoogleAds />
       <CustomOrders />
       <Community />
       <About />
