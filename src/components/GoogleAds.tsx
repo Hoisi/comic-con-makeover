@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import starsBackground from "@/assets/stars-background.png";
+import halftoneBackground from "@/assets/halftone-background.jpg";
 
 const GoogleAds = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -19,7 +19,7 @@ const GoogleAds = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${starsBackground})`,
+          backgroundImage: `url(${halftoneBackground})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           transform: `translateY(${scrollY * 0.5}px)`,
