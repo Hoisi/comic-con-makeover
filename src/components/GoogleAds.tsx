@@ -28,7 +28,7 @@ const GoogleAds = () => {
       />
       
       {/* Overlay for better ad visibility */}
-      <div className="absolute inset-0 bg-background/40 z-0" />
+      <div className="absolute inset-0 bg-black z-0" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
