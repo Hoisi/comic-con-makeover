@@ -1,19 +1,13 @@
 import { Button } from "@/components/ui/button";
 import aboutMascot from "@/assets/about-mascot.jpg";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-teal">
+  return <section id="about" className="py-20 bg-teal">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Image */}
           <div className="relative">
             <div className="aspect-square rounded-lg overflow-hidden">
-              <img
-                src={aboutMascot}
-                alt="Hyde Hermit Studio Mascot"
-                className="w-full h-full object-cover"
-              />
+              <img src={aboutMascot} alt="Hyde Hermit Studio Mascot" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -24,19 +18,13 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-white/90">
               <p>
-                Hyde Hermit Studio was founded on the belief that art and imagination should be accessible to everyone. 
-                What started as a small workshop has blossomed into a vibrant creative space where unique handcrafted 
-                items come to life.
+                Hyde Hermit Studio is a creative partnership between Hoi and Kai, two artists who specialize in making custom commission drawings, traditional artwork, tiki shirt apparel, plushies, keychains, tote bags, card mats, stickers, enamel pins, books, and prints.
               </p>
               <p>
-                Every piece we create is made with passion and attention to detail. From miniature fantasy creatures 
-                to custom dice sets and enchanting dioramas, we pour our hearts into each creation. We believe that 
-                handmade items carry a special magic that mass-produced goods simply cannot replicate.
+                Our brand is represented by a unique hermit crab mascot named Hyde, which symbolizes the unique perspective of artists. Since 2017, we have been showcasing our work at events both locally in Los Angeles and out of state. We look forward to meeting you at future events.
               </p>
               <p>
-                Our studio is more than just a business—it's a community of creative souls who share a love for 
-                craftsmanship and imagination. Whether you're a collector, a gamer, or simply someone who appreciates 
-                the beauty of handmade art, we invite you to explore our world and become part of our story.
+                In addition to our physical artworks, we also offer live streaming on Twitch where we showcase the process of creating new products and give an exclusive behind-the-scenes look at our work. We invite you to come and visit us on Twitch and say hi as we continue to make new and exciting products.
               </p>
             </div>
             <div className="mt-8">
@@ -47,8 +35,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
