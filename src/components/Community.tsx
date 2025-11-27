@@ -1,18 +1,13 @@
 import { Button } from "@/components/ui/button";
-
 const Community = () => {
-  return (
-    <section className="relative py-12 overflow-hidden">
-      <div 
-        className="absolute inset-0 opacity-90"
-        style={{
-          backgroundImage: 'url(/images/tropical-pattern.jpg)',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
-          backgroundSize: 'auto'
-        }}
-      ></div>
+  return <section className="relative py-12 overflow-hidden">
+      <div className="absolute inset-0 opacity-90" style={{
+      backgroundImage: 'url(/images/tropical-pattern.jpg)',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'repeat',
+      backgroundSize: 'auto'
+    }}></div>
       <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/80"></div>
       <div className="container relative z-10">
         <div className="max-w-6xl mx-auto bg-terracotta rounded-lg overflow-hidden">
@@ -31,15 +26,8 @@ const Community = () => {
                 Connect with fellow creators, share your work, and get exclusive updates
               </p>
               <div>
-                <Button 
-                  asChild
-                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto rounded-md shadow-lg hover:shadow-xl transition-all"
-                >
-                  <a 
-                    href="#" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
+                <Button asChild className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto rounded-md shadow-lg hover:shadow-xl transition-all">
+                  <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/mynBhc2zvA">
                     Join
                   </a>
                 </Button>
@@ -48,8 +36,6 @@ const Community = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Community;
