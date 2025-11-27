@@ -9,23 +9,19 @@ import About from "@/components/About";
 import InstagramFeed from "@/components/InstagramFeed";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       <HeroCarousel />
       <Features />
       <Products />
-      <GoogleAds />
+      <GoogleAds className="bg-slate-900" />
       <CustomOrders />
       <Community />
       <About />
       <InstagramFeed />
       <Newsletter />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
