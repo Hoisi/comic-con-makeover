@@ -1,9 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Header = () => {
-  return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
+  return <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-2xl font-bold text-primary">Hyde Hermit Studio</span>
@@ -17,15 +15,13 @@ const Header = () => {
             Products
           </a>
           <a href="#custom" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Custom Orders
+            Clients
           </a>
           <Button variant="ghost" size="icon">
             <ShoppingCart className="h-5 w-5" />
           </Button>
         </nav>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
