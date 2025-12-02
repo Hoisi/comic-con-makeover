@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 const Community = () => {
   return <section className="relative py-12 overflow-hidden">
       <div className="absolute inset-0 opacity-90" style={{
-      backgroundImage: 'url(/images/tropical-pattern.jpg)',
+      backgroundImage: 'url(/images/hyde-pattern.jpg)',
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat',

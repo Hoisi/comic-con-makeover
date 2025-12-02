@@ -15,7 +15,7 @@ const Index = () => {
       <HeroCarousel />
       <Features />
       <Products />
-      <GoogleAds className="bg-slate-900" />
+      <GoogleAds />
       <CustomOrders />
       <Community />
       <About />
