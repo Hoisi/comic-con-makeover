@@ -5,7 +5,7 @@ const Header = () => {
   return <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src={hydeLogo} alt="Hyde Hermit Studio" className="h-12" />
+          <img src={hydeLogo} alt="Hyde Hermit Studio" className="h-16" />
         </div>
         
         <nav className="hidden md:flex items-center gap-6">
