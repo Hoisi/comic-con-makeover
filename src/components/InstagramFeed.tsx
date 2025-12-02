@@ -1,17 +1,21 @@
 import { Instagram } from "lucide-react";
+import { useEffect } from "react";
 
 const InstagramFeed = () => {
-  // Placeholder Instagram posts - replace with actual feed data
-  const instagramPosts = [
-    { id: 1, image: "https://images.unsplash.com/photo-1533928298208-27ff66555d8d?w=400&h=400&fit=crop" },
-    { id: 2, image: "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=400&h=400&fit=crop" },
-    { id: 3, image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400&h=400&fit=crop" },
-    { id: 4, image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=400&fit=crop" },
-    { id: 5, image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=400&fit=crop" },
-    { id: 6, image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=400&fit=crop" },
-    { id: 7, image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=400&fit=crop" },
-    { id: 8, image: "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=400&h=400&fit=crop" },
-  ];
+  useEffect(() => {
+    // Load Elfsight script
+    const script = document.createElement('script');
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <section className="relative py-16 overflow-hidden">
@@ -37,36 +41,7 @@ const InstagramFeed = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 md:gap-3">
-          {instagramPosts.map((post) => (
-            <a
-              key={post.id}
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative aspect-square overflow-hidden rounded-lg group"
-            >
-              <img
-                src={post.image}
-                alt={`Instagram post ${post.id}`}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
-            </a>
-          ))}
-        </div>
-
-        <div className="text-center mt-8">
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-          >
-            <Instagram className="w-5 h-5" />
-            <span className="font-semibold">View More on Instagram</span>
-          </a>
-        </div>
+        <div className="elfsight-app-b3afc477-e22f-4767-b4b9-f2d40c87bf1f" data-elfsight-app-lazy></div>
       </div>
     </section>
   );
