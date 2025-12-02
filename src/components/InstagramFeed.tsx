@@ -19,7 +19,7 @@ const InstagramFeed = () => {
       <div 
         className="absolute inset-0 opacity-90"
         style={{
-          backgroundImage: 'url(/images/palm-pattern.jpg)',
+          backgroundImage: 'url(/images/pixel-moai-pattern.jpg)',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center',
           backgroundRepeat: 'repeat',
