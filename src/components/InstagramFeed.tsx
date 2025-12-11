@@ -35,7 +35,7 @@ const InstagramFeed = () => {
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
       backgroundRepeat: 'repeat',
-      backgroundSize: 'auto'
+      backgroundSize: '50%'
     }}></div>
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background/80"></div>
       <div className="container relative z-10 max-w-5xl">
