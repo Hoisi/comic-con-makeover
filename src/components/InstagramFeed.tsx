@@ -19,15 +19,6 @@ const InstagramFeed = () => {
   }, {
     id: 6,
     image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=400&fit=crop"
-  }, {
-    id: 7,
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=400&fit=crop"
-  }, {
-    id: 8,
-    image: "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=400&h=400&fit=crop"
-  }, {
-    id: 9,
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400&h=400&fit=crop"
   }];
   return <section className="relative py-16 overflow-hidden">
       <div className="absolute inset-0 opacity-90" style={{
