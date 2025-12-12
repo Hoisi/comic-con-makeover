@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
-import Features from "@/components/Features";
+import UpcomingEvents from "@/components/UpcomingEvents";
 import Products from "@/components/Products";
 import GoogleAds from "@/components/GoogleAds";
 import CustomOrders from "@/components/CustomOrders";
@@ -13,13 +13,13 @@ const Index = () => {
   return <div className="min-h-screen">
       <Header />
       <HeroCarousel />
-      <Features />
       <Products />
       <GoogleAds />
       <CustomOrders />
       <Community />
       <About />
       <InstagramFeed />
+      <UpcomingEvents />
       <Newsletter />
       <Footer />
     </div>;
