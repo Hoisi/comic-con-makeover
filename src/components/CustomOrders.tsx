@@ -40,7 +40,7 @@ const CustomOrders = () => {
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 h-24 flex items-center justify-center border border-white/20 hover:bg-white/20 transition-colors min-w-[200px]">
                   {client.logo ? (
-                    <img src={client.logo} alt={client.name} className="h-20 w-auto object-contain" />
+                    <img src={client.logo} alt={client.name} className="h-36 w-auto object-contain" />
                   ) : (
                     <span className="text-white font-semibold text-lg">{client.name}</span>
                   )}
