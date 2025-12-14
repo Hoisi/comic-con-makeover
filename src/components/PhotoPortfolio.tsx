@@ -7,7 +7,7 @@ const portfolioImages = [
   { src: "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=800", alt: "Cosplay photo 1" },
   { src: "https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?w=800", alt: "Merchandise display" },
   { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800", alt: "Event setup" },
-  { src: "https://images.unsplash.com/photo-1611457194403-d3f8c5d3a8e2?w=800", alt: "Fan art collection" },
+  
   { src: "https://images.unsplash.com/photo-1594652634010-275456c808d0?w=800", alt: "Convention crowd" },
   { src: "https://images.unsplash.com/photo-1608889175638-9322300c46e8?w=800", alt: "Product showcase" },
   { src: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=800", alt: "Cosplay group" },
