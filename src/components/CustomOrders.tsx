@@ -4,6 +4,10 @@ import bossmonstaLogo from "@/assets/bossmonsta-logo.png";
 import newejhjrLogo from "@/assets/newejhjr-logo.png";
 import partyWantedLogo from "@/assets/party-wanted-logo.png";
 import tlakuiloKalliLogo from "@/assets/tlakuilo-kalli-logo.png";
+import shepLogo from "@/assets/shep-logo.png";
+import boldkoboldLogo from "@/assets/boldkobold-logo.png";
+import smileBrightPinsLogo from "@/assets/smile-bright-pins-logo.png";
+import letsTalkFiguresLogo from "@/assets/lets-talk-figures-logo.png";
 
 // Client logos - replace placeholders with your actual client logos
 const clients = [
@@ -11,10 +15,10 @@ const clients = [
   { name: "Newejhjr", logo: newejhjrLogo },
   { name: "Party Wanted", logo: partyWantedLogo },
   { name: "Tlakuilo Kalli", logo: tlakuiloKalliLogo },
-  { name: "Client 5", logo: null },
-  { name: "Client 6", logo: null },
-  { name: "Client 7", logo: null },
-  { name: "Client 8", logo: null },
+  { name: "Shep", logo: shepLogo },
+  { name: "BoldKobold", logo: boldkoboldLogo },
+  { name: "Smile Bright Pins", logo: smileBrightPinsLogo },
+  { name: "Let's Talk Figures", logo: letsTalkFiguresLogo },
 ];
 
 const CustomOrders = () => {
