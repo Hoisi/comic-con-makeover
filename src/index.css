@@ -168,7 +168,7 @@ All colors MUST be HSL.
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-33.333%);
+      transform: translateX(-50%);
     }
   }
 
@@ -179,12 +179,13 @@ All colors MUST be HSL.
 
   .logo-marquee {
     display: flex;
-    gap: 2rem;
-    animation: marquee 30s linear infinite;
+    width: fit-content;
+    animation: marquee 25s linear infinite;
+    will-change: transform;
   }
 
   .logo-marquee-item {
     flex-shrink: 0;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 }

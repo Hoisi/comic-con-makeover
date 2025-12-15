@@ -28,9 +28,9 @@ const CustomOrders = () => {
         
         <div className="logo-marquee-container">
           <div className="logo-marquee">
-            {[...clients, ...clients, ...clients].map((client, index) => (
+            {[...clients, ...clients].map((client, index) => (
               <div key={index} className="logo-marquee-item">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center border border-white/20 hover:bg-white/20 transition-colors">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center border border-white/20 hover:bg-white/20 transition-colors min-w-[180px]">
                   {client.logo ? (
                     <img src={client.logo} alt={client.name} className="h-24 w-auto object-contain" />
                   ) : (
