@@ -34,9 +34,9 @@ const CustomOrders = () => {
   return (
     <section id="custom" className="py-20 bg-gradient-accent overflow-hidden">
       <div className="container">
-        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center mb-12 px-4">
-          <span className="text-terracotta">Join</span> the thousands of organizations, both large and small, who trust us with their branding and meeting needs!
-        </h3>
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+          Clients We Work With
+        </h2>
         
         <div className="embla overflow-hidden" ref={emblaRef}>
           <div className="embla__container flex">
