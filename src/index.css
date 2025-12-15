@@ -165,10 +165,10 @@ All colors MUST be HSL.
   /* Logo Marquee Animation */
   @keyframes marquee {
     0% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 
@@ -179,13 +179,21 @@ All colors MUST be HSL.
 
   .logo-marquee {
     display: flex;
-    width: fit-content;
+    width: max-content;
     animation: marquee 25s linear infinite;
     will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .logo-marquee-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 1.5rem;
+    padding-right: 1.5rem; /* keeps spacing consistent at the loop seam */
   }
 
   .logo-marquee-item {
     flex-shrink: 0;
-    padding: 0 1.5rem;
   }
 }
