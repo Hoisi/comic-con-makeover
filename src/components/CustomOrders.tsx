@@ -1,10 +1,12 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import bossmonstaLogo from "@/assets/bossmonsta-logo.png";
+import newejhjrLogo from "@/assets/newejhjr-logo.png";
 
 // Client logos - replace placeholders with your actual client logos
 const clients = [
   { name: "Boss Monsta", logo: bossmonstaLogo },
+  { name: "Newejhjr", logo: newejhjrLogo },
   { name: "Client 2", logo: null },
   { name: "Client 3", logo: null },
   { name: "Client 4", logo: null },
