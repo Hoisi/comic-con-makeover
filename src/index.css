@@ -161,4 +161,34 @@ All colors MUST be HSL.
     flex: 0 0 100%;
     min-width: 0;
   }
+
+  /* Logo Marquee Animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  .logo-marquee-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .logo-marquee {
+    display: flex;
+    gap: 2rem;
+    animation: marquee 30s linear infinite;
+  }
+
+  .logo-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .logo-marquee-item {
+    flex-shrink: 0;
+    padding: 0 1rem;
+  }
 }
