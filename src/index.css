@@ -183,10 +183,6 @@ All colors MUST be HSL.
     animation: marquee 30s linear infinite;
   }
 
-  .logo-marquee:hover {
-    animation-play-state: paused;
-  }
-
   .logo-marquee-item {
     flex-shrink: 0;
     padding: 0 1rem;
