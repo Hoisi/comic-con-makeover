@@ -1,6 +1,28 @@
 import { useEffect, useState } from "react";
 import halftoneBackground from "@/assets/halftone-background.jpg";
 
+const AdUnit = () => {
+  useEffect(() => {
+    try {
+      // @ts-ignore
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.error("AdSense error:", e);
+    }
+  }, []);
+
+  return (
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-9578149041260403"
+      data-ad-slot="7565964904"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  );
+};
+
 const GoogleAds = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -33,42 +55,18 @@ const GoogleAds = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Ad Slot 1 */}
-          <div className="relative min-h-[250px] border-2 border-dashed border-muted rounded-lg overflow-hidden bg-muted/20">
-            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-              Advertisement
-            </div>
-            {/* Google Ad will be inserted here */}
-            <img 
-              alt="Advertisement" 
-              className="w-full h-full object-cover" 
-              src="https://tpc.googlesyndication.com/daca_images/simgad/14886815988342110867"
-            />
+          <div className="relative min-h-[250px] rounded-lg overflow-hidden bg-muted/20">
+            <AdUnit key="ad-1" />
           </div>
 
           {/* Ad Slot 2 */}
-          <div className="relative min-h-[250px] border-2 border-dashed border-muted rounded-lg overflow-hidden bg-muted/20">
-            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-              Advertisement
-            </div>
-            {/* Google Ad will be inserted here */}
-            <img 
-              alt="Advertisement" 
-              className="w-full h-full object-cover" 
-              src="https://tpc.googlesyndication.com/daca_images/simgad/14886815988342110867"
-            />
+          <div className="relative min-h-[250px] rounded-lg overflow-hidden bg-muted/20">
+            <AdUnit key="ad-2" />
           </div>
 
           {/* Ad Slot 3 */}
-          <div className="relative min-h-[250px] border-2 border-dashed border-muted rounded-lg overflow-hidden bg-muted/20">
-            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm">
-              Advertisement
-            </div>
-            {/* Google Ad will be inserted here */}
-            <img 
-              alt="Advertisement" 
-              className="w-full h-full object-cover" 
-              src="https://tpc.googlesyndication.com/daca_images/simgad/14886815988342110867"
-            />
+          <div className="relative min-h-[250px] rounded-lg overflow-hidden bg-muted/20">
+            <AdUnit key="ad-3" />
           </div>
         </div>
       </div>
