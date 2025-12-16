@@ -8,6 +8,9 @@ import booth5 from "@/assets/booth-5.jpg";
 import booth6 from "@/assets/booth-6.jpg";
 import booth7 from "@/assets/booth-7.jpg";
 import booth8 from "@/assets/booth-8.jpg";
+import booth9 from "@/assets/booth-9.jpg";
+import booth10 from "@/assets/booth-10.jpg";
+import booth11 from "@/assets/booth-11.jpg";
 
 const portfolioImages = [
   { src: booth1, alt: "Hyde Hermit Studio booth at convention" },
@@ -18,6 +21,9 @@ const portfolioImages = [
   { src: booth6, alt: "Hyde Hermit Studio at convention event" },
   { src: booth7, alt: "Hyde Hermit Studio booth setup" },
   { src: booth8, alt: "Hyde Hermit Studio merchandise display" },
+  { src: booth9, alt: "Hyde Hermit Studio outdoor booth" },
+  { src: booth10, alt: "Hyde Hermit Studio tent setup" },
+  { src: booth11, alt: "Hyde Hermit Studio outdoor vendor display" },
 ];
 
 const PhotoPortfolio = () => {
