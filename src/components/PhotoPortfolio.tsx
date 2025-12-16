@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import booth1 from "@/assets/booth-1.jpg";
+import booth2 from "@/assets/booth-2.jpg";
+import booth3 from "@/assets/booth-3.jpg";
+import booth4 from "@/assets/booth-4.jpg";
+import booth5 from "@/assets/booth-5.jpg";
+import booth6 from "@/assets/booth-6.jpg";
+import booth7 from "@/assets/booth-7.jpg";
+import booth8 from "@/assets/booth-8.jpg";
 
-// Placeholder images with varying aspect ratios for masonry effect
 const portfolioImages = [
-  { src: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800", alt: "Convention booth display" },
-  { src: "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=800", alt: "Cosplay photo 1" },
-  { src: "https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?w=800", alt: "Merchandise display" },
-  { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800", alt: "Event setup" },
-  
-  { src: "https://images.unsplash.com/photo-1594652634010-275456c808d0?w=800", alt: "Convention crowd" },
-  { src: "https://images.unsplash.com/photo-1608889175638-9322300c46e8?w=800", alt: "Product showcase" },
-  { src: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=800", alt: "Cosplay group" },
-  { src: "https://images.unsplash.com/photo-1612036781124-847f8939b154?w=800", alt: "Booth visitors" },
-  { src: "https://images.unsplash.com/photo-1559583109-3e7968136c99?w=800", alt: "Custom merchandise" },
-  { src: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800", alt: "Event highlights" },
-  { src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800", alt: "Convention hall" },
+  { src: booth1, alt: "Hyde Hermit Studio booth at convention" },
+  { src: booth2, alt: "Hyde Hermit Studio booth display" },
+  { src: booth3, alt: "Hyde Hermit Studio convention setup" },
+  { src: booth4, alt: "Hyde Hermit Studio booth with merchandise" },
+  { src: booth5, alt: "Hyde Hermit Studio vendor booth" },
+  { src: booth6, alt: "Hyde Hermit Studio at convention event" },
+  { src: booth7, alt: "Hyde Hermit Studio booth setup" },
+  { src: booth8, alt: "Hyde Hermit Studio merchandise display" },
 ];
 
 const PhotoPortfolio = () => {
@@ -23,6 +26,9 @@ const PhotoPortfolio = () => {
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-12">
+          Booth Portfolio
+        </h2>
 
         {/* Masonry Grid */}
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
