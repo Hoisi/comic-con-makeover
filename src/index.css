@@ -180,7 +180,7 @@ All colors MUST be HSL.
   .logo-marquee {
     display: flex;
     width: max-content;
-    animation: marquee 25s linear infinite;
+    animation: marquee 45s linear infinite;
     will-change: transform;
     transform: translate3d(0, 0, 0);
   }
