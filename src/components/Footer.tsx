@@ -1,9 +1,17 @@
 import { Facebook, Instagram, Twitter, Mail, Youtube } from "lucide-react";
+import palmTree from "@/assets/palm-tree-footer.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-forest text-white py-12">
-      <div className="container">
+    <footer className="bg-forest text-white py-12 relative overflow-hidden">
+      {/* Decorative palm tree */}
+      <img 
+        src={palmTree} 
+        alt="" 
+        className="absolute bottom-0 right-0 h-64 md:h-80 lg:h-96 w-auto opacity-20 pointer-events-none"
+        aria-hidden="true"
+      />
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-bold text-xl mb-4">Hyde Hermit Studio</h3>
