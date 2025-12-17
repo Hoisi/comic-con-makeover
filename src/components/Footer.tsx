@@ -18,9 +18,8 @@ const Footer = () => {
             <img 
               src={hydeLogo} 
               alt="Hyde Hermit Studio" 
-              className="h-16 w-auto mb-4"
+              className="h-24 w-auto mb-4"
             />
-            <h3 className="font-bold text-xl mb-2">Hyde Hermit Studio</h3>
             <p className="text-white/80">
               Handcrafted curiosities and custom creations
             </p>
