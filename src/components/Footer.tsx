@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter, Mail, Youtube } from "lucide-react";
 import palmTree from "@/assets/palm-tree-footer.png";
+import hydeLogo from "@/assets/hyde-logo.png";
 
 const Footer = () => {
   return (
@@ -14,7 +15,12 @@ const Footer = () => {
       <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-xl mb-4">Hyde Hermit Studio</h3>
+            <img 
+              src={hydeLogo} 
+              alt="Hyde Hermit Studio" 
+              className="h-16 w-auto mb-4"
+            />
+            <h3 className="font-bold text-xl mb-2">Hyde Hermit Studio</h3>
             <p className="text-white/80">
               Handcrafted curiosities and custom creations
             </p>
