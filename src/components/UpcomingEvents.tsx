@@ -6,7 +6,7 @@ import reddingAnimeLogo from "@/assets/redding-anime-logo.png";
 const conventions = [
   {
     name: "GX3",
-    location: "Anaheim, CA",
+    location: "San Jose, CA",
     date: "January 2025",
     logo: gx3Logo,
   },
