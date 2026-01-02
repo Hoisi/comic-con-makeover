@@ -1,5 +1,7 @@
 import gx3Logo from "@/assets/gx3-logo.webp";
 import gsfcLogo from "@/assets/gsfc-logo.png";
+import fxdeLogo from "@/assets/fxde-logo.png";
+import reddingAnimeLogo from "@/assets/redding-anime-logo.png";
 
 const conventions = [
   {
@@ -14,6 +16,18 @@ const conventions = [
     date: "March 2025",
     logo: gsfcLogo,
   },
+  {
+    name: "FXDE",
+    location: "TBD",
+    date: "2025",
+    logo: fxdeLogo,
+  },
+  {
+    name: "Redding Anime",
+    location: "Redding, CA",
+    date: "2026",
+    logo: reddingAnimeLogo,
+  },
 ];
 
 const UpcomingEvents = () => {
@@ -25,7 +39,7 @@ const UpcomingEvents = () => {
           <h2 className="text-4xl font-bold text-white mb-4">Upcoming Events</h2>
           <p className="text-white/80 text-lg">Find us at these upcoming conventions!</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {conventions.map((convention, index) => (
             <div
               key={index}
