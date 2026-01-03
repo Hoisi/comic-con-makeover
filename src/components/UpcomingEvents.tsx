@@ -2,6 +2,8 @@ import gx3Logo from "@/assets/gx3-logo.webp";
 import gsfcLogo from "@/assets/gsfc-logo.png";
 import fxdeLogo from "@/assets/fxde-logo.png";
 import reddingAnimeLogo from "@/assets/redding-anime-logo.png";
+import sdccLogo from "@/assets/sdcc-logo.png";
+import ecccLogo from "@/assets/eccc-logo.png";
 const conventions = [{
   name: "GX3",
   location: "San Jose, CA",
@@ -22,6 +24,16 @@ const conventions = [{
   location: "Redding, CA",
   date: "2026",
   logo: reddingAnimeLogo
+}, {
+  name: "SDCC",
+  location: "San Diego, CA",
+  date: "2025",
+  logo: sdccLogo
+}, {
+  name: "ECCC",
+  location: "Seattle, WA",
+  date: "2025",
+  logo: ecccLogo
 }];
 const UpcomingEvents = () => {
   return <section className="relative py-20 bg-forest overflow-hidden">
