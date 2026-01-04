@@ -27,9 +27,7 @@ const About = () => {
               </p>
             </div>
             <div className="mt-8">
-              <Button variant="hero" size="lg" className="bg-white text-teal hover:bg-white/90 shadow-none hover:shadow-none">
-                Learn More About Us
-              </Button>
+              
             </div>
           </div>
         </div>
