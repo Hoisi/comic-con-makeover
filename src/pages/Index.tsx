@@ -15,12 +15,12 @@ const Index = () => {
       <Header />
       <HeroCarousel />
       <Products />
-      <GoogleAds />
       <CustomOrders />
       <Community />
       <About />
       <PhotoPortfolio />
       <InstagramFeed />
+      <GoogleAds />
       <UpcomingEvents />
       <Newsletter />
       <Footer />
