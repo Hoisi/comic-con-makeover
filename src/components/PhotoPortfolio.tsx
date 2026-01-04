@@ -32,7 +32,7 @@ const PhotoPortfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="py-16 bg-background">
+    <section id="booth-portfolio" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-12">
           Booth Portfolio

@@ -23,6 +23,9 @@ const Header = () => {
           <a href="#custom" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Clients
           </a>
+          <a href="#booth-portfolio" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Booth Portfolio
+          </a>
           <Button variant="ghost" size="icon" className="relative">
             <ShoppingCart className="h-5 w-5" />
             {totalItems > 0 && (
