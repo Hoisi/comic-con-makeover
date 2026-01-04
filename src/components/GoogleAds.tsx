@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import halftoneBackground from "@/assets/halftone-background.jpg";
 
-const AdUnit = () => {
+interface AdUnitProps {
+  adSlot: string;
+}
+
+const AdUnit = ({ adSlot }: AdUnitProps) => {
   useEffect(() => {
     try {
       // @ts-ignore
@@ -16,7 +20,7 @@ const AdUnit = () => {
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-9578149041260403"
-      data-ad-slot="7565964904"
+      data-ad-slot={adSlot}
       data-ad-format="auto"
       data-full-width-responsive="true"
     />
@@ -54,19 +58,19 @@ const GoogleAds = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Ad Slot 1 */}
+          {/* Ad Unit 1 */}
           <div className="relative min-h-[250px] rounded-lg overflow-hidden bg-muted/20">
-            <AdUnit key="ad-1" />
+            <AdUnit key="ad-1" adSlot="1433710946" />
           </div>
 
-          {/* Ad Slot 2 */}
+          {/* Ad Unit 2 */}
           <div className="relative min-h-[250px] rounded-lg overflow-hidden bg-muted/20">
-            <AdUnit key="ad-2" />
+            <AdUnit key="ad-2" adSlot="7807547608" />
           </div>
 
-          {/* Ad Slot 3 */}
+          {/* Ad Unit 3 */}
           <div className="relative min-h-[250px] rounded-lg overflow-hidden bg-muted/20">
-            <AdUnit key="ad-3" />
+            <AdUnit key="ad-3" adSlot="3399375215" />
           </div>
         </div>
       </div>
