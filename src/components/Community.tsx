@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import discordMascot from "@/assets/discord-mascot.png";
+
 const Community = () => {
   return <section className="relative py-12 overflow-hidden">
       <div className="absolute inset-0 opacity-90" style={{
@@ -13,8 +15,8 @@ const Community = () => {
         <div className="max-w-6xl mx-auto bg-terracotta rounded-lg overflow-hidden">
           <div className="flex items-center flex-col md:flex-row">
             {/* Mascot Image Section */}
-            <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-square bg-white/10 flex items-center justify-center border-r-0 md:border-r-2 border-dashed border-white/30">
-              <span className="text-white/60 text-center px-4">Add your Discord mascot image here</span>
+            <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-square flex items-center justify-center p-8">
+              <img src={discordMascot} alt="Hyde mascot holding Discord logo" className="w-full h-full object-contain" />
             </div>
             
             {/* Content Section */}
