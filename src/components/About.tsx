@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-col lg:flex-row min-h-[500px] lg:min-h-[600px]">
         {/* Left side - Full bleed image */}
         <div className="relative lg:w-[58%] min-h-[300px] lg:min-h-full">
-          <img alt="Hyde Hermit Studio Mascot" className="absolute inset-0 w-full h-full object-cover object-center" src="/lovable-uploads/576704ab-10ed-4f90-9b97-f6aeec9f0a8a.jpg" />
+          <img alt="Hyde Hermit Studio Mascot" className="absolute inset-0 w-full h-full object-cover object-center" src="/lovable-uploads/2e9d5bd6-8f7e-4a96-a94e-3392514fae97.jpg" />
         </div>
         
         {/* Right side - Content box with semi-transparent background */}
