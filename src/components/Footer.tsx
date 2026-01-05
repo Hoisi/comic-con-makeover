@@ -37,17 +37,17 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="/faq" className="text-white/80 hover:text-white transition-colors">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="/shipping" className="text-white/80 hover:text-white transition-colors">
                   Shipping
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="/returns" className="text-white/80 hover:text-white transition-colors">
                   Returns
                 </a>
               </li>
