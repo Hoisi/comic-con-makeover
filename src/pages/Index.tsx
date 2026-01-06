@@ -8,6 +8,7 @@ import Community from "@/components/Community";
 import About from "@/components/About";
 import InstagramFeed from "@/components/InstagramFeed";
 import PhotoPortfolio from "@/components/PhotoPortfolio";
+import CustomOrdersSection from "@/components/CustomOrdersSection";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       <Community />
       <About />
       <PhotoPortfolio />
+      <CustomOrdersSection />
       <InstagramFeed />
       <GoogleAds />
       <UpcomingEvents />
