@@ -32,9 +32,22 @@ const PhotoPortfolio = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="booth-portfolio" className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-12">
+    <section id="booth-portfolio" className="py-16 relative overflow-hidden" style={{ backgroundColor: '#020617' }}>
+      {/* Dark Sphere Grid Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: "#020617",
+          backgroundImage: `
+            linear-gradient(to right, rgba(71,85,105,0.3) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(71,85,105,0.3) 1px, transparent 1px),
+            radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 70%)
+          `,
+          backgroundSize: "32px 32px, 32px 32px, 100% 100%",
+        }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
           Booth Portfolio
         </h2>
 
