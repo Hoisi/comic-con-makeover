@@ -3,8 +3,23 @@ import { Package, Palette, MessageSquare } from "lucide-react";
 
 const CustomOrdersSection = () => {
   return (
-    <section id="custom-orders" className="py-20" style={{ backgroundColor: '#4FBFDF' }}>
-      <div className="container">
+    <section id="custom-orders" className="py-20 relative overflow-hidden" style={{ backgroundColor: '#4FBFDF' }}>
+      {/* Wavy pattern background */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundColor: '#3BA8C7',
+          mask: `
+            radial-gradient(52.9px at 50% calc(100% + 40.5px),#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) calc(50% - 60px) calc(50% - 17.5px + .5px)/120px 35px,
+            radial-gradient(52.9px at 50% -40.5px,#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) 50% calc(50% + 17.5px)/120px 35px
+          `,
+          WebkitMask: `
+            radial-gradient(52.9px at 50% calc(100% + 40.5px),#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) calc(50% - 60px) calc(50% - 17.5px + .5px)/120px 35px,
+            radial-gradient(52.9px at 50% -40.5px,#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) 50% calc(50% + 17.5px)/120px 35px
+          `,
+        }}
+      />
+      <div className="container relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
             Custom Orders
