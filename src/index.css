@@ -162,6 +162,20 @@ All colors MUST be HSL.
     min-width: 0;
   }
 
+  /* Wave Scroll Animation */
+  @keyframes wave-scroll {
+    0% {
+      background-position: 0 0, 60px 0;
+    }
+    100% {
+      background-position: -120px 0, -60px 0;
+    }
+  }
+
+  .animate-wave-scroll {
+    animation: wave-scroll 3s linear infinite;
+  }
+
   /* Logo Marquee Animation */
   @keyframes marquee {
     0% {
