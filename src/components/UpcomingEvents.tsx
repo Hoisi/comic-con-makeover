@@ -12,7 +12,7 @@ const conventions = [{
   date: "January 2026",
   logo: gx3Logo
 }, {
-  name: "Motorized Animal Weekend",
+  name: "MAW",
   location: "TBD",
   date: "February 8, 2026",
   logo: motorizedAnimalLogo
