@@ -49,7 +49,7 @@ const FAQ = () => {
                     <a href="mailto:hydehermitstudios@gmail.com" className="text-primary hover:underline">
                       hydehermitstudios@gmail.com
                     </a>{" "}
-                    or use the Contact Us form on our website.
+                    or use the <Link to="/contact" className="text-primary hover:underline">Contact Us form</Link> on our website.
                   </AccordionContent>
                 </AccordionItem>
 
