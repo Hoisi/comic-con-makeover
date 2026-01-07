@@ -4,20 +4,27 @@ import fxdeLogo from "@/assets/fxde-logo.png";
 import reddingAnimeLogo from "@/assets/redding-anime-logo.png";
 import sdccLogo from "@/assets/sdcc-logo.png";
 import ecccLogo from "@/assets/eccc-logo.png";
+import motorizedAnimalLogo from "@/assets/motorized-animal-logo.png";
+
 const conventions = [{
   name: "GX3",
   location: "San Jose, CA",
-  date: "January 2025",
+  date: "January 2026",
   logo: gx3Logo
+}, {
+  name: "Motorized Animal Weekend",
+  location: "TBD",
+  date: "February 8, 2026",
+  logo: motorizedAnimalLogo
 }, {
   name: "GSFC",
   location: "San Diego, CA",
-  date: "March 2025",
+  date: "March 2026",
   logo: gsfcLogo
 }, {
   name: "FXDE",
   location: "TBD",
-  date: "2025",
+  date: "2026",
   logo: fxdeLogo
 }, {
   name: "Redding Anime",
@@ -27,12 +34,12 @@ const conventions = [{
 }, {
   name: "SDCC",
   location: "San Diego, CA",
-  date: "2025",
+  date: "2026",
   logo: sdccLogo
 }, {
   name: "ECCC",
   location: "Seattle, WA",
-  date: "2025",
+  date: "2026",
   logo: ecccLogo
 }];
 const UpcomingEvents = () => {
