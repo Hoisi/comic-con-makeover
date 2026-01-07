@@ -13,7 +13,7 @@ const conventions = [{
   logo: gx3Logo
 }, {
   name: "MAW",
-  location: "TBD",
+  location: "Commerce, CA",
   date: "February 8, 2026",
   logo: motorizedAnimalLogo
 }, {
@@ -23,7 +23,7 @@ const conventions = [{
   logo: gsfcLogo
 }, {
   name: "FXDE",
-  location: "TBD",
+  location: "Denver, CO",
   date: "2026",
   logo: fxdeLogo
 }, {
