@@ -6,16 +6,11 @@ const CustomOrdersSection = () => {
     <section id="custom-orders" className="py-20 relative overflow-hidden" style={{ backgroundColor: '#4FBFDF' }}>
       {/* Wavy pattern background */}
       <div 
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none animate-wave-scroll"
         style={{
-          backgroundColor: '#3BA8C7',
-          mask: `
-            radial-gradient(52.9px at 50% calc(100% + 40.5px),#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) calc(50% - 60px) calc(50% - 17.5px + .5px)/120px 35px,
-            radial-gradient(52.9px at 50% -40.5px,#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) 50% calc(50% + 17.5px)/120px 35px
-          `,
-          WebkitMask: `
-            radial-gradient(52.9px at 50% calc(100% + 40.5px),#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) calc(50% - 60px) calc(50% - 17.5px + .5px)/120px 35px,
-            radial-gradient(52.9px at 50% -40.5px,#0000 calc(99% - 5px),#000 calc(101% - 5px) 99%,#0000 101%) 50% calc(50% + 17.5px)/120px 35px
+          background: `
+            radial-gradient(52.9px at 50% calc(100% + 40.5px),#0000 calc(99% - 5px),#3BA8C7 calc(101% - 5px) 99%,#0000 101%) calc(50% - 60px) calc(50% - 17.5px + .5px)/120px 35px repeat,
+            radial-gradient(52.9px at 50% -40.5px,#0000 calc(99% - 5px),#3BA8C7 calc(101% - 5px) 99%,#0000 101%) 50% calc(50% + 17.5px)/120px 35px repeat
           `,
         }}
       />
