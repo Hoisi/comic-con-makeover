@@ -26,8 +26,17 @@ const About = () => {
                 In addition to our physical artworks, we also offer live streaming on Twitch where we showcase the process of creating new products and give an exclusive behind-the-scenes look at our work. We invite you to come and visit us on Twitch and say hi as we continue to make new and exciting products.
               </p>
             </div>
-            <div className="mt-8">
-              
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button asChild variant="heroSecondary" size="lg">
+                <a href="https://www.artstation.com/hoisington" target="_blank" rel="noopener noreferrer">
+                  Hoi's Portfolio
+                </a>
+              </Button>
+              <Button asChild variant="heroSecondary" size="lg">
+                <a href="https://www.artstation.com/artistninjakai" target="_blank" rel="noopener noreferrer">
+                  Kai's Portfolio
+                </a>
+              </Button>
             </div>
           </div>
         </div>
