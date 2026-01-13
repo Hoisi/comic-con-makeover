@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCart } from "@/contexts/CartContext";
 import hydeLogo from "@/assets/hyde-logo.png";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const { totalItems } = useCart();
@@ -27,9 +36,71 @@ const Header = () => {
           <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             About Us
           </a>
-          <a href="#products" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            Products
-          </a>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
+                  Products
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-48 gap-1 p-2 bg-card border border-border shadow-lg">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#products"
+                          className={cn(
+                            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium">Pins</div>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#products"
+                          className={cn(
+                            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium">Stickers</div>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#products"
+                          className={cn(
+                            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium">Prints</div>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#products"
+                          className={cn(
+                            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium">Apparel</div>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <a href="#custom" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Clients
           </a>
