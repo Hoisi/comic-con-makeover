@@ -2,17 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, FileText, Shield, Scale, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 const TermsOfService = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       <main className="container py-12 md:py-16">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
-        >
+        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
           <ArrowLeft className="h-4 w-4" />
           Back to Home
         </Link>
@@ -22,7 +17,7 @@ const TermsOfService = () => {
             📜 Terms of Service
           </h1>
           <p className="text-muted-foreground mb-12">
-            Last Updated: [Insert Date]
+            Last Updated: 1/13/2026 
           </p>
 
           {/* Quick Info Cards */}
@@ -173,10 +168,7 @@ const TermsOfService = () => {
                 </a>
               </p>
             </div>
-            <a 
-              href="mailto:hydehermitstudios@gmail.com" 
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
-            >
+            <a href="mailto:hydehermitstudios@gmail.com" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
               Contact Us
             </a>
           </div>
@@ -184,8 +176,6 @@ const TermsOfService = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default TermsOfService;
