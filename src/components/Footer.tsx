@@ -30,6 +30,11 @@ const Footer = () => {
                   Custom Orders
                 </a>
               </li>
+              <li>
+                <a href="/terms-of-service" className="text-white/80 hover:text-white transition-colors">
+                  Terms of Service
+                </a>
+              </li>
             </ul>
           </div>
           
