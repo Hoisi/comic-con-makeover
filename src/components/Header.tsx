@@ -39,7 +39,13 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-sm font-medium text-foreground hover:text-primary hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
+                <NavigationMenuTrigger 
+                  className="bg-transparent text-sm font-medium text-foreground hover:text-primary hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent"
+                  onClick={() => {
+                    const element = document.getElementById('products');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Products
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
