@@ -105,7 +105,7 @@ const TermsOfService = () => {
               </p>
             </section>
 
-            <section className="bg-card border border-border rounded-xl p-6 md:p-8 border-primary/30 bg-primary/5">
+            <section className="bg-card border border-border rounded-xl p-6 md:p-8">
               <h2 className="text-xl font-bold text-foreground mb-4">Section 5 - Intellectual Property</h2>
               <p className="text-muted-foreground">
                 The content on this website, including but not limited to the Hyde Hermit crab mascot, character designs, artwork, illustrations, and logos, are the intellectual property of Hoi and Kai (Hyde Hermit Studio). You may not reproduce, duplicate, copy, sell, or exploit any portion of the Service or artwork without express written permission from us.
