@@ -15,7 +15,7 @@ const Community = () => {
           <div className="flex items-center flex-col md:flex-row">
             {/* Mascot Image Section */}
             <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-square flex items-center justify-center p-8">
-              <img alt="Hyde mascot holding Discord logo" className="w-full h-full object-contain" src="/lovable-uploads/93087fe6-c70c-4afa-8dfd-f8d325236f9d.png" />
+              <img alt="Hyde mascot holding Discord logo" className="w-full h-full object-contain" src="/lovable-uploads/41f4cd0e-6a72-488c-bee8-5b68ac0d63d4.png" />
             </div>
             
             {/* Content Section */}
