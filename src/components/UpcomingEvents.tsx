@@ -5,6 +5,7 @@ import reddingAnimeLogo from "@/assets/redding-anime-logo.png";
 import sdccLogo from "@/assets/sdcc-logo.png";
 import ecccLogo from "@/assets/eccc-logo.png";
 import motorizedAnimalLogo from "@/assets/motorized-animal-logo.png";
+import tmgLogo from "@/assets/tmg-logo.svg";
 
 const conventions = [{
   name: "MAW",
@@ -36,6 +37,11 @@ const conventions = [{
   location: "Denver, CO",
   date: "May 28, 2026",
   logo: fxdeLogo
+}, {
+  name: "TMG",
+  location: "Philadelphia, PA",
+  date: "June 26, 2026",
+  logo: tmgLogo
 }, {
   name: "SDCC",
   location: "San Diego, CA",
