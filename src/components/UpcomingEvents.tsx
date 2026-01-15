@@ -7,40 +7,40 @@ import ecccLogo from "@/assets/eccc-logo.png";
 import motorizedAnimalLogo from "@/assets/motorized-animal-logo.png";
 
 const conventions = [{
-  name: "GX3",
-  location: "San Jose, CA",
-  date: "January 2026",
-  logo: gx3Logo
-}, {
   name: "MAW",
   location: "Commerce, CA",
   date: "February 8, 2026",
   logo: motorizedAnimalLogo
 }, {
+  name: "GX3",
+  location: "San Jose, CA",
+  date: "February 13, 2026",
+  logo: gx3Logo
+}, {
+  name: "Redding Anime",
+  location: "Redding, CA",
+  date: "February 28, 2026",
+  logo: reddingAnimeLogo
+}, {
+  name: "ECCC",
+  location: "Seattle, WA",
+  date: "March 5, 2026",
+  logo: ecccLogo
+}, {
   name: "GSFC",
   location: "San Diego, CA",
-  date: "March 2026",
+  date: "March 13, 2026",
   logo: gsfcLogo
 }, {
   name: "FXDE",
   location: "Denver, CO",
-  date: "2026",
+  date: "May 28, 2026",
   logo: fxdeLogo
-}, {
-  name: "Redding Anime",
-  location: "Redding, CA",
-  date: "2026",
-  logo: reddingAnimeLogo
 }, {
   name: "SDCC",
   location: "San Diego, CA",
-  date: "2026",
+  date: "July 23, 2026",
   logo: sdccLogo
-}, {
-  name: "ECCC",
-  location: "Seattle, WA",
-  date: "2026",
-  logo: ecccLogo
 }];
 const UpcomingEvents = () => {
   return <section className="relative py-20 bg-forest overflow-hidden">
