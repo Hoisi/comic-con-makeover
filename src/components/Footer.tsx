@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Mail, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, Youtube } from "lucide-react";
 import palmTree from "@/assets/palm-tree-footer.png";
 import hydeLogo from "@/assets/hyde-logo.png";
 const Footer = () => {
@@ -78,8 +78,10 @@ const Footer = () => {
               <a href="#" className="text-white/80 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors" aria-label="Twitter">
-                <Twitter className="h-6 w-6" />
+              <a href="#" className="text-white/80 hover:text-white transition-colors" aria-label="X">
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
               </a>
               <a href="#" className="text-white/80 hover:text-white transition-colors" aria-label="TikTok">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
