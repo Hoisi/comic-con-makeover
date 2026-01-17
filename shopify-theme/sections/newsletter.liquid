@@ -1,0 +1,74 @@
+{% comment %}
+  Newsletter Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section class="newsletter-section">
+  <div class="newsletter-bg"></div>
+  <div class="newsletter-overlay"></div>
+  
+  <div class="container">
+    <div class="newsletter-content">
+      <h2 class="newsletter-title">{{ section.settings.title }}</h2>
+      <p class="newsletter-subtitle">{{ section.settings.subtitle }}</p>
+      
+      {% form 'customer', class: 'newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        
+        {{ form.errors | default_errors }}
+        
+        {% if form.posted_successfully? %}
+          <p style="color: white; text-align: center;">Thanks for subscribing!</p>
+        {% else %}
+          <input 
+            type="email" 
+            name="contact[email]" 
+            placeholder="{{ section.settings.placeholder }}"
+            class="newsletter-input"
+            required
+            autocomplete="email"
+          >
+          <button type="submit" class="btn btn-secondary" style="height: 3rem;">
+            {{ section.settings.button_text }}
+          </button>
+        {% endif %}
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Stay in the Loop!"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Subscribe to get updates on new products, exclusive offers, and creative inspiration"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Email Placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Subscribe"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

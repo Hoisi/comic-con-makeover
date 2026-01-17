@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "hero-carousel": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "title": "Unlock Your Creative Spirit",
+            "subtitle": "Handcrafted curiosities and custom creations",
+            "button_text": "Explore Products",
+            "button_link": "/collections/all"
+          }
+        },
+        "slide-2": {
+          "type": "slide",
+          "settings": {
+            "title": "Custom Creations Made Real",
+            "subtitle": "Transform your imagination into tangible art",
+            "button_text": "Start Custom Order",
+            "button_link": "/pages/custom-orders"
+          }
+        },
+        "slide-3": {
+          "type": "slide",
+          "settings": {
+            "title": "Enchanting Miniatures",
+            "subtitle": "Each piece tells its own magical story",
+            "button_text": "View Collection",
+            "button_link": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["slide-1", "slide-2", "slide-3"]
+    },
+    "featured-products": {
+      "type": "featured-products",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8
+      }
+    },
+    "about": {
+      "type": "about",
+      "settings": {
+        "title": "Hey, We're Hyde Hermit Studio!",
+        "content": "<p>Hyde Hermit Studio is a creative partnership between Hoi and Kai, two artists who specialize in making custom commission drawings, traditional artwork, tiki shirt apparel, plushies, keychains, tote bags, card mats, stickers, enamel pins, books, and prints.</p><p>Our brand is represented by a unique hermit crab mascot named Hyde, which symbolizes the unique perspective of artists. Since 2017, we have been showcasing our work at events both locally in Los Angeles and out of state. We look forward to meeting you at future events.</p><p>In addition to our physical artworks, we also offer live streaming on Twitch where we showcase the process of creating new products and give an exclusive behind-the-scenes look at our work.</p>",
+        "button_1_text": "Hoi's Portfolio",
+        "button_1_link": "https://www.artstation.com/hoisington",
+        "button_2_text": "Kai's Portfolio",
+        "button_2_link": "https://www.artstation.com/artistninjakai"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Stay in the Loop!",
+        "subtitle": "Subscribe to get updates on new products, exclusive offers, and creative inspiration",
+        "placeholder": "Enter your email",
+        "button_text": "Subscribe"
+      }
+    }
+  },
+  "order": [
+    "hero-carousel",
+    "featured-products",
+    "about",
+    "newsletter"
+  ]
+}

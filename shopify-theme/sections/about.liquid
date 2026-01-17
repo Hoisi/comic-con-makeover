@@ -1,0 +1,94 @@
+{% comment %}
+  About Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section id="about" class="about-section">
+  <div class="about-layout">
+    <!-- Left side - Full bleed image -->
+    <div class="about-image-container">
+      {% if section.settings.image %}
+        <img 
+          src="{{ section.settings.image | img_url: '1200x' }}" 
+          alt="{{ section.settings.image.alt | escape | default: 'About Hyde Hermit Studio' }}"
+          loading="lazy"
+        >
+      {% else %}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+    
+    <!-- Right side - Content box -->
+    <div class="about-content-container">
+      <div class="about-content">
+        <h2 class="about-title">{{ section.settings.title }}</h2>
+        <div class="about-text">
+          {{ section.settings.content }}
+        </div>
+        <div class="about-buttons">
+          {% if section.settings.button_1_text != blank %}
+            <a href="{{ section.settings.button_1_link }}" class="btn btn-hero-secondary btn-lg" target="_blank" rel="noopener noreferrer">
+              {{ section.settings.button_1_text }}
+            </a>
+          {% endif %}
+          {% if section.settings.button_2_text != blank %}
+            <a href="{{ section.settings.button_2_link }}" class="btn btn-hero-secondary btn-lg" target="_blank" rel="noopener noreferrer">
+              {{ section.settings.button_2_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Hey, We're Hyde Hermit Studio!"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Hyde Hermit Studio is a creative partnership between Hoi and Kai, two artists who specialize in making custom commission drawings, traditional artwork, tiki shirt apparel, plushies, keychains, tote bags, card mats, stickers, enamel pins, books, and prints.</p><p>Our brand is represented by a unique hermit crab mascot named Hyde, which symbolizes the unique perspective of artists. Since 2017, we have been showcasing our work at events both locally in Los Angeles and out of state.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Button 1 Text",
+      "default": "Hoi's Portfolio"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Button 2 Text",
+      "default": "Kai's Portfolio"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Section"
+    }
+  ]
+}
+{% endschema %}
