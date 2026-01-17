@@ -1,0 +1,121 @@
+{% comment %}
+  Featured Products Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section id="products" class="products-section">
+  <div class="container">
+    <div class="products-grid">
+      {% for product in collections[section.settings.collection].products limit: section.settings.products_to_show %}
+        <div class="product-card animate-fade-in" style="animation-delay: {{ forloop.index | times: 100 }}ms">
+          <!-- Image Container -->
+          <div class="product-image-container">
+            {% if product.featured_image %}
+              <img 
+                src="{{ product.featured_image | img_url: '400x400', crop: 'center' }}" 
+                alt="{{ product.featured_image.alt | escape | default: product.title }}"
+                loading="lazy"
+              >
+            {% else %}
+              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            
+            <!-- Badges -->
+            <div class="product-badges">
+              {% if product.compare_at_price > product.price %}
+                <span class="product-badge">Sale</span>
+              {% endif %}
+              {% for tag in product.tags %}
+                {% if tag contains 'badge:' %}
+                  <span class="product-badge">{{ tag | remove: 'badge:' }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Text Container -->
+          <div class="product-info">
+            <h3 class="product-title">{{ product.title }}</h3>
+            <div class="product-prices">
+              {% if product.compare_at_price > product.price %}
+                <span class="product-price-original">{{ product.compare_at_price | money }}</span>
+                <span class="product-price-sale">{{ product.price | money }}</span>
+                {% assign savings = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+                <span class="product-savings">Save {{ savings }}%!</span>
+              {% else %}
+                <span class="product-price-sale">{{ product.price | money }}</span>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Progress Section (if limited time) -->
+          {% if product.metafields.custom.days_left %}
+            <div class="product-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 54%"></div>
+              </div>
+              <div class="progress-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span class="progress-label">Limited Time</span>
+                <span class="progress-days">{{ product.metafields.custom.days_left }} Days Left</span>
+              </div>
+            </div>
+          {% endif %}
+
+          <!-- Add to Cart Button -->
+          <div class="product-actions">
+            <form action="/cart/add" method="post">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" class="add-to-cart-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="m1 1 4 4 2.68 11.55a2 2 0 0 0 2 1.45h9.72a2 2 0 0 0 2-1.45L23 6H6"></path>
+                </svg>
+                Add to Cart
+              </button>
+            </form>
+          </div>
+        </div>
+      {% else %}
+        <p>No products found in this collection.</p>
+      {% endfor %}
+    </div>
+
+    <div class="products-footer">
+      <a href="/collections/{{ section.settings.collection }}" class="btn btn-secondary btn-lg">
+        View All Products
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Products to show"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}
