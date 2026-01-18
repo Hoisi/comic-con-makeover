@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import { ShoppingCart, Search, X } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useCart } from "@/contexts/CartContext";
+import { CartDrawer } from "@/components/CartDrawer";
 import hydeLogo from "@/assets/hyde-logo.png";
 import {
   NavigationMenu,
@@ -13,9 +13,9 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { totalItems } = useCart();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -28,12 +28,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img src={hydeLogo} alt="Hyde Hermit Studio" className="h-16" />
-        </div>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             About Us
           </a>
           <NavigationMenu>
@@ -53,7 +53,7 @@ const Header = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <a
-                          href="#products"
+                          href="/#products"
                           className={cn(
                             "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                             "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -66,7 +66,7 @@ const Header = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <a
-                          href="#products"
+                          href="/#products"
                           className={cn(
                             "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                             "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -79,7 +79,7 @@ const Header = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <a
-                          href="#products"
+                          href="/#products"
                           className={cn(
                             "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                             "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -92,7 +92,7 @@ const Header = () => {
                     <li>
                       <NavigationMenuLink asChild>
                         <a
-                          href="#products"
+                          href="/#products"
                           className={cn(
                             "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                             "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -102,15 +102,28 @@ const Header = () => {
                         </a>
                       </NavigationMenuLink>
                     </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          to="/products"
+                          className={cn(
+                            "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium text-teal">View All →</div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <a href="#custom" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#custom" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Clients
           </a>
-          <a href="#booth-portfolio" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#booth-portfolio" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Booth Portfolio
           </a>
           
@@ -142,14 +155,7 @@ const Header = () => {
             </Button>
           </div>
 
-          <Button variant="ghost" size="icon" className="relative">
-            <ShoppingCart className="h-5 w-5" />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 bg-teal text-primary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                {totalItems}
-              </span>
-            )}
-          </Button>
+          <CartDrawer />
         </nav>
       </div>
     </header>
