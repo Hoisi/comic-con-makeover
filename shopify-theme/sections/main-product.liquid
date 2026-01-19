@@ -1,0 +1,133 @@
+{% comment %}
+  Main Product Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section class="product-page">
+  <div class="container">
+    <div class="product-layout">
+      <!-- Product Images -->
+      <div class="product-images">
+        <div class="product-main-image">
+          {% if product.featured_image %}
+            <img 
+              src="{{ product.featured_image | img_url: '800x' }}" 
+              alt="{{ product.featured_image.alt | escape | default: product.title }}"
+              id="main-product-image"
+            >
+          {% else %}
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        </div>
+        
+        {% if product.images.size > 1 %}
+          <div class="product-thumbnails">
+            {% for image in product.images %}
+              <button 
+                class="product-thumbnail {% if forloop.first %}active{% endif %}"
+                data-image-url="{{ image | img_url: '800x' }}"
+                onclick="updateMainImage(this)"
+              >
+                <img 
+                  src="{{ image | img_url: '100x100', crop: 'center' }}" 
+                  alt="{{ image.alt | escape | default: product.title }}"
+                >
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-details">
+        <h1 class="product-page-title">{{ product.title }}</h1>
+        
+        <div class="product-page-price">
+          {% if product.compare_at_price > product.price %}
+            <span class="product-price-original">{{ product.compare_at_price | money }}</span>
+            <span class="product-price-current">{{ product.price | money }}</span>
+            {% assign savings = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+            <span class="product-savings-badge">Save {{ savings }}%</span>
+          {% else %}
+            <span class="product-price-current">{{ product.price | money }}</span>
+          {% endif %}
+        </div>
+
+        <div class="product-page-description">
+          {{ product.description }}
+        </div>
+
+        {% form 'product', product %}
+          {% if product.variants.size > 1 %}
+            <div class="product-variants">
+              {% for option in product.options_with_values %}
+                <div class="variant-option">
+                  <label for="option-{{ option.name | handleize }}">{{ option.name }}</label>
+                  <select 
+                    id="option-{{ option.name | handleize }}"
+                    class="variant-select"
+                    name="options[{{ option.name }}]"
+                  >
+                    {% for value in option.values %}
+                      <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+          <div class="product-quantity">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-selector">
+              <button type="button" onclick="updateQuantity(-1)">-</button>
+              <input type="number" id="quantity" name="quantity" value="1" min="1">
+              <button type="button" onclick="updateQuantity(1)">+</button>
+            </div>
+          </div>
+
+          <button 
+            type="submit" 
+            class="btn btn-primary btn-lg add-to-cart-main"
+            {% unless product.available %}disabled{% endunless %}
+          >
+            {% if product.available %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="m1 1 4 4 2.68 11.55a2 2 0 0 0 2 1.45h9.72a2 2 0 0 0 2-1.45L23 6H6"></path>
+              </svg>
+              Add to Cart
+            {% else %}
+              Sold Out
+            {% endif %}
+          </button>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function updateMainImage(thumbnail) {
+    const mainImage = document.getElementById('main-product-image');
+    mainImage.src = thumbnail.dataset.imageUrl;
+    
+    document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
+    thumbnail.classList.add('active');
+  }
+
+  function updateQuantity(delta) {
+    const input = document.getElementById('quantity');
+    const newValue = Math.max(1, parseInt(input.value) + delta);
+    input.value = newValue;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Product Page",
+  "settings": []
+}
+{% endschema %}

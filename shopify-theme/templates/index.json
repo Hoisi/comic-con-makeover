@@ -51,6 +51,132 @@
         "button_2_link": "https://www.artstation.com/artistninjakai"
       }
     },
+    "booth-portfolio": {
+      "type": "booth-portfolio",
+      "settings": {
+        "title": "Booth Portfolio"
+      }
+    },
+    "custom-orders": {
+      "type": "custom-orders",
+      "settings": {
+        "title": "Custom Orders",
+        "subtitle": "Have a unique vision? We bring your ideas to life with custom merchandise, artwork, and exclusive collaborations tailored just for you.",
+        "button_text": "Inquire About Custom Orders",
+        "button_link": "/pages/contact",
+        "email": "hydehermitstudios@gmail.com"
+      },
+      "blocks": {
+        "feature-1": {
+          "type": "feature",
+          "settings": {
+            "icon": "palette",
+            "title": "Custom Artwork",
+            "description": "Commission original pieces featuring your characters, concepts, or brand identity."
+          }
+        },
+        "feature-2": {
+          "type": "feature",
+          "settings": {
+            "icon": "package",
+            "title": "Bulk & Wholesale",
+            "description": "Perfect for events, conventions, or retail. Get special pricing on large orders."
+          }
+        },
+        "feature-3": {
+          "type": "feature",
+          "settings": {
+            "icon": "message",
+            "title": "Collaborations",
+            "description": "Partner with us for exclusive merch drops, artist collabs, or special projects."
+          }
+        }
+      },
+      "block_order": ["feature-1", "feature-2", "feature-3"]
+    },
+    "upcoming-events": {
+      "type": "upcoming-events",
+      "settings": {
+        "title": "Upcoming Events",
+        "subtitle": "Find us at these upcoming conventions!"
+      },
+      "blocks": {
+        "event-1": {
+          "type": "event",
+          "settings": {
+            "name": "MAW",
+            "location": "Commerce, CA",
+            "date": "February 8, 2026"
+          }
+        },
+        "event-2": {
+          "type": "event",
+          "settings": {
+            "name": "GX3",
+            "location": "San Jose, CA",
+            "date": "February 13, 2026"
+          }
+        },
+        "event-3": {
+          "type": "event",
+          "settings": {
+            "name": "Redding Anime",
+            "location": "Redding, CA",
+            "date": "February 28, 2026"
+          }
+        },
+        "event-4": {
+          "type": "event",
+          "settings": {
+            "name": "ECCC",
+            "location": "Seattle, WA",
+            "date": "March 5, 2026"
+          }
+        },
+        "event-5": {
+          "type": "event",
+          "settings": {
+            "name": "GSFC",
+            "location": "San Diego, CA",
+            "date": "March 13, 2026"
+          }
+        },
+        "event-6": {
+          "type": "event",
+          "settings": {
+            "name": "FXDE",
+            "location": "Denver, CO",
+            "date": "May 28, 2026"
+          }
+        },
+        "event-7": {
+          "type": "event",
+          "settings": {
+            "name": "TMG",
+            "location": "Philadelphia, PA",
+            "date": "June 26, 2026"
+          }
+        },
+        "event-8": {
+          "type": "event",
+          "settings": {
+            "name": "SDCC",
+            "location": "San Diego, CA",
+            "date": "July 23, 2026"
+          }
+        }
+      },
+      "block_order": ["event-1", "event-2", "event-3", "event-4", "event-5", "event-6", "event-7", "event-8"]
+    },
+    "community": {
+      "type": "community",
+      "settings": {
+        "title": "Join Our Discord Community!",
+        "description": "Connect with fellow creators, share your work, and get exclusive updates",
+        "button_text": "Join",
+        "button_link": "https://discord.gg/mynBhc2zvA"
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "settings": {
@@ -65,6 +191,10 @@
     "hero-carousel",
     "featured-products",
     "about",
+    "booth-portfolio",
+    "custom-orders",
+    "upcoming-events",
+    "community",
     "newsletter"
   ]
 }

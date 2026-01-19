@@ -1,0 +1,38 @@
+{% comment %}
+  Meta Tags - Hyde Hermit Studio
+  SEO and social sharing meta tags
+{% endcomment %}
+
+<link rel="canonical" href="{{ canonical_url }}">
+
+{% if template.name == 'product' %}
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="{{ product.title }}">
+  <meta property="og:description" content="{{ product.description | strip_html | truncate: 200 }}">
+  {% if product.featured_image %}
+    <meta property="og:image" content="https:{{ product.featured_image | img_url: '1200x630' }}">
+  {% endif %}
+  <meta property="product:price:amount" content="{{ product.price | money_without_currency }}">
+  <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
+{% elsif template.name == 'collection' %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ collection.title }}">
+  <meta property="og:description" content="{{ collection.description | strip_html | truncate: 200 }}">
+  {% if collection.image %}
+    <meta property="og:image" content="https:{{ collection.image | img_url: '1200x630' }}">
+  {% endif %}
+{% else %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description | default: shop.description }}">
+  {% if page.image %}
+    <meta property="og:image" content="https:{{ page.image | img_url: '1200x630' }}">
+  {% endif %}
+{% endif %}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ canonical_url }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description | default: shop.description | truncate: 200 }}">
