@@ -1,0 +1,115 @@
+{% comment %}
+  Upcoming Events Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section class="events-section">
+  <div class="events-bg-pattern"></div>
+  
+  <div class="container events-container">
+    <div class="events-header">
+      <h2 class="events-title">{{ section.settings.title }}</h2>
+      <p class="events-subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+
+    <div class="events-grid">
+      {% for block in section.blocks %}
+        <div class="event-card" {{ block.shopify_attributes }}>
+          {% if block.settings.logo %}
+            <div class="event-logo">
+              <img 
+                src="{{ block.settings.logo | img_url: '200x' }}" 
+                alt="{{ block.settings.name | escape }}"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+          <h3 class="event-name">{{ block.settings.name }}</h3>
+          <p class="event-location">{{ block.settings.location }}</p>
+          <p class="event-date">{{ block.settings.date }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Upcoming Events",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Upcoming Events"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Find us at these upcoming conventions!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "event",
+      "name": "Event",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Event Logo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Event Name",
+          "default": "Convention Name"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location",
+          "default": "City, State"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "January 1, 2025"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Upcoming Events",
+      "blocks": [
+        {
+          "type": "event",
+          "settings": {
+            "name": "GX3",
+            "location": "San Jose, CA",
+            "date": "February 13, 2026"
+          }
+        },
+        {
+          "type": "event",
+          "settings": {
+            "name": "ECCC",
+            "location": "Seattle, WA",
+            "date": "March 5, 2026"
+          }
+        },
+        {
+          "type": "event",
+          "settings": {
+            "name": "SDCC",
+            "location": "San Diego, CA",
+            "date": "July 23, 2026"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

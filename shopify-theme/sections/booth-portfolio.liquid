@@ -1,0 +1,66 @@
+{% comment %}
+  Booth Portfolio Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section id="booth-portfolio" class="portfolio-section">
+  <div class="portfolio-bg"></div>
+  
+  <div class="container portfolio-container">
+    <h2 class="portfolio-title">{{ section.settings.title }}</h2>
+
+    <div class="portfolio-grid">
+      {% for block in section.blocks %}
+        <div class="portfolio-item" {{ block.shopify_attributes }}>
+          {% if block.settings.image %}
+            <img 
+              src="{{ block.settings.image | img_url: '600x' }}" 
+              alt="{{ block.settings.alt | escape | default: 'Booth photo' }}"
+              loading="lazy"
+              class="portfolio-image"
+            >
+          {% else %}
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Booth Portfolio",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Booth Portfolio"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Alt Text",
+          "default": "Booth photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Booth Portfolio"
+    }
+  ]
+}
+{% endschema %}

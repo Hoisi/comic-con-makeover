@@ -1,0 +1,117 @@
+{% comment %}
+  Main Cart Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section class="cart-page">
+  <div class="container">
+    <h1 class="cart-title">Your Cart</h1>
+
+    {% if cart.item_count > 0 %}
+      <form action="/cart" method="post" class="cart-form">
+        <div class="cart-items">
+          {% for item in cart.items %}
+            <div class="cart-item">
+              <div class="cart-item-image">
+                {% if item.image %}
+                  <img 
+                    src="{{ item.image | img_url: '100x100', crop: 'center' }}" 
+                    alt="{{ item.title | escape }}"
+                  >
+                {% else %}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              
+              <div class="cart-item-details">
+                <h3 class="cart-item-title">
+                  <a href="{{ item.url }}">{{ item.product.title }}</a>
+                </h3>
+                {% if item.variant.title != 'Default Title' %}
+                  <p class="cart-item-variant">{{ item.variant.title }}</p>
+                {% endif %}
+                <p class="cart-item-price">{{ item.price | money }}</p>
+              </div>
+              
+              <div class="cart-item-quantity">
+                <div class="quantity-selector">
+                  <button type="button" onclick="updateCartQuantity('{{ item.key }}', {{ item.quantity | minus: 1 }})">-</button>
+                  <input 
+                    type="number" 
+                    name="updates[]" 
+                    value="{{ item.quantity }}" 
+                    min="0"
+                    data-key="{{ item.key }}"
+                  >
+                  <button type="button" onclick="updateCartQuantity('{{ item.key }}', {{ item.quantity | plus: 1 }})">+</button>
+                </div>
+              </div>
+              
+              <div class="cart-item-total">
+                {{ item.line_price | money }}
+              </div>
+              
+              <button 
+                type="button" 
+                class="cart-item-remove"
+                onclick="updateCartQuantity('{{ item.key }}', 0)"
+                aria-label="Remove {{ item.title }}"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 6h18"></path>
+                  <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                  <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                </svg>
+              </button>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="cart-summary">
+          <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <span>{{ cart.total_price | money }}</span>
+          </div>
+          <p class="cart-shipping-note">Shipping & taxes calculated at checkout</p>
+          
+          <button type="submit" name="checkout" class="btn btn-primary btn-lg cart-checkout-btn">
+            Checkout
+          </button>
+          
+          <a href="/collections/all" class="cart-continue-shopping">
+            Continue Shopping
+          </a>
+        </div>
+      </form>
+    {% else %}
+      <div class="cart-empty">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="m1 1 4 4 2.68 11.55a2 2 0 0 0 2 1.45h9.72a2 2 0 0 0 2-1.45L23 6H6"></path>
+        </svg>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added anything yet.</p>
+        <a href="/collections/all" class="btn btn-primary btn-lg">
+          Start Shopping
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  function updateCartQuantity(key, quantity) {
+    fetch('/cart/change.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: key, quantity: quantity })
+    }).then(() => window.location.reload());
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Cart Page",
+  "settings": []
+}
+{% endschema %}

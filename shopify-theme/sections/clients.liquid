@@ -1,0 +1,82 @@
+{% comment %}
+  Clients/Partners Section - Hyde Hermit Studio
+{% endcomment %}
+
+<section id="custom" class="clients-section">
+  <div class="container clients-container">
+    <div class="clients-header">
+      <h2 class="clients-title">{{ section.settings.title }}</h2>
+      <p class="clients-subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+
+    <div class="clients-grid">
+      {% for block in section.blocks %}
+        <div class="client-card" {{ block.shopify_attributes }}>
+          {% if block.settings.logo %}
+            <img 
+              src="{{ block.settings.logo | img_url: '200x' }}" 
+              alt="{{ block.settings.name | escape }}"
+              loading="lazy"
+              class="client-logo"
+            >
+          {% else %}
+            <div class="client-placeholder">{{ block.settings.name | slice: 0 }}</div>
+          {% endif %}
+          {% if block.settings.show_name %}
+            <p class="client-name">{{ block.settings.name }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clients",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our Clients & Partners"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Trusted by amazing brands and creators"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "client",
+      "name": "Client",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Client Name",
+          "default": "Client Name"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_name",
+          "label": "Show Name",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clients"
+    }
+  ]
+}
+{% endschema %}

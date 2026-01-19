@@ -24,68 +24,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <style>
-    :root {
-      --background: 190, 100%, 97%;
-      --foreground: 195, 100%, 10%;
-      --card: 180, 100%, 99%;
-      --card-foreground: 195, 100%, 10%;
-      --primary: 184, 77%, 34%;
-      --primary-foreground: 0, 0%, 100%;
-      --secondary: 340, 82%, 67%;
-      --secondary-foreground: 0, 0%, 100%;
-      --muted: 184, 30%, 90%;
-      --muted-foreground: 184, 15%, 40%;
-      --accent: 45, 95%, 60%;
-      --accent-foreground: 195, 100%, 10%;
-      --destructive: 0, 84.2%, 60.2%;
-      --border: 184, 40%, 85%;
-      --ring: 184, 77%, 34%;
-      --radius: 0.75rem;
-      --forest: 158, 64%, 52%;
-      --terracotta: 340, 82%, 67%;
-      --teal: 184, 77%, 34%;
-      --teal-light: 184, 65%, 50%;
-      --navy: 210, 100%, 20%;
-      --cream: 45, 70%, 92%;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: hsl(var(--background));
-      color: hsl(var(--foreground));
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        padding: 0 2rem;
-      }
-    }
-  </style>
+  <!-- Alpine.js for carousel -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
-  {% sections 'header-group' %}
+  <a class="sr-only" href="#main-content">Skip to content</a>
   
-  <main role="main">
+  {% section 'header' %}
+  
+  <main id="main-content" role="main">
     {{ content_for_layout }}
   </main>
 
-  {% sections 'footer-group' %}
+  {% section 'footer' %}
   
   {{ 'theme.js' | asset_url | script_tag }}
 </body>
