@@ -1,5 +1,9 @@
 # Hyde Hermit Studio - Shopify Theme
 
+## Complete Theme Export
+
+This is a complete Shopify Liquid theme that replicates the React-based Hyde Hermit Studio website. It includes all sections, templates, and styling needed for a fully functional Shopify store.
+
 This is a custom Shopify Liquid theme converted from the React/Lovable codebase.
 
 ## Theme Structure

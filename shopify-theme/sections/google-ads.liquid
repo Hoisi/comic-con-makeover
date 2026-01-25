@@ -1,0 +1,112 @@
+{% comment %}
+  Google Ads Section - Hyde Hermit Studio
+  Note: Add your AdSense script in theme.liquid or through Google Tag Manager
+{% endcomment %}
+
+<section class="ads-section">
+  <div class="ads-bg" style="background-image: url('{{ 'halftone-background.jpg' | asset_url }}');"></div>
+  <div class="ads-overlay"></div>
+  
+  <div class="container ads-content">
+    <div class="ads-grid">
+      <!-- Ad Unit 1 -->
+      <div class="ad-unit">
+        {% if section.settings.enable_ads %}
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="{{ section.settings.ad_client }}"
+            data-ad-slot="{{ section.settings.ad_slot_1 }}"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        {% else %}
+          <div class="ad-placeholder">
+            <p>Ad Space</p>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Ad Unit 2 -->
+      <div class="ad-unit">
+        {% if section.settings.enable_ads %}
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="{{ section.settings.ad_client }}"
+            data-ad-slot="{{ section.settings.ad_slot_2 }}"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        {% else %}
+          <div class="ad-placeholder">
+            <p>Ad Space</p>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Ad Unit 3 -->
+      <div class="ad-unit">
+        {% if section.settings.enable_ads %}
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="{{ section.settings.ad_client }}"
+            data-ad-slot="{{ section.settings.ad_slot_3 }}"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        {% else %}
+          <div class="ad-placeholder">
+            <p>Ad Space</p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if section.settings.enable_ads %}
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Google Ads",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_ads",
+      "label": "Enable Google Ads",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "ad_client",
+      "label": "AdSense Client ID",
+      "default": "ca-pub-XXXXXXXXXX"
+    },
+    {
+      "type": "text",
+      "id": "ad_slot_1",
+      "label": "Ad Slot 1",
+      "default": "1234567890"
+    },
+    {
+      "type": "text",
+      "id": "ad_slot_2",
+      "label": "Ad Slot 2",
+      "default": "1234567890"
+    },
+    {
+      "type": "text",
+      "id": "ad_slot_3",
+      "label": "Ad Slot 3",
+      "default": "1234567890"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Google Ads"
+    }
+  ]
+}
+{% endschema %}

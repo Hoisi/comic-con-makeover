@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-terms",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
