@@ -1930,3 +1930,722 @@ a {
 .animate-fade-in {
   animation: fade-in 0.6s ease-out forwards;
 }
+
+/* ========================================
+   POLICY PAGES
+   ======================================== */
+.policy-page {
+  padding: 3rem 0;
+  background-color: hsl(190, 100%, 97%);
+  min-height: 80vh;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(184, 15%, 40%);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: hsl(184, 77%, 34%);
+}
+
+.policy-content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.policy-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .policy-title {
+    font-size: 3rem;
+  }
+}
+
+.policy-subtitle {
+  color: hsl(184, 15%, 40%);
+  margin-bottom: 3rem;
+}
+
+/* Info Cards */
+.info-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.info-card {
+  background-color: hsl(180, 100%, 99%);
+  border: 1px solid hsl(184, 40%, 85%);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.info-card svg {
+  color: hsl(184, 77%, 34%);
+  margin-bottom: 0.75rem;
+}
+
+.info-card h3 {
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+  margin-bottom: 0.25rem;
+}
+
+.info-card p {
+  color: hsl(184, 15%, 40%);
+  font-size: 0.875rem;
+}
+
+/* Policy Sections */
+.policy-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.policy-section {
+  background-color: hsl(180, 100%, 99%);
+  border: 1px solid hsl(184, 40%, 85%);
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+}
+
+.policy-section--highlighted {
+  border-color: hsl(184, 77%, 70%);
+  background-color: hsl(184, 77%, 97%);
+}
+
+.policy-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+  margin-bottom: 1rem;
+}
+
+.policy-section p {
+  color: hsl(184, 15%, 40%);
+  margin-bottom: 1rem;
+}
+
+.policy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: hsl(184, 15%, 40%);
+  margin-bottom: 0.75rem;
+}
+
+.bullet-list li::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: hsl(184, 77%, 34%);
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.numbered-steps {
+  list-style: none;
+  padding: 0;
+}
+
+.numbered-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: hsl(184, 15%, 40%);
+  margin-bottom: 1rem;
+  counter-increment: step;
+}
+
+.numbered-steps li::before {
+  content: counter(step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: hsl(184, 77%, 95%);
+  color: hsl(184, 77%, 34%);
+  border-radius: 50%;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Policy CTA */
+.policy-cta {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: hsl(184, 77%, 95%);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.policy-cta h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+  margin-bottom: 0.5rem;
+}
+
+.policy-cta p {
+  color: hsl(184, 15%, 40%);
+  margin-bottom: 1rem;
+}
+
+.contact-details {
+  margin-bottom: 1.5rem;
+}
+
+.contact-details p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+  color: hsl(184, 77%, 34%);
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   FAQ ACCORDION
+   ======================================== */
+.faq-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(184, 77%, 34%);
+  margin-bottom: 1rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border-bottom: 1px solid hsl(184, 40%, 85%);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(195, 100%, 10%);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.accordion-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-trigger::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: hsl(184, 77%, 34%);
+  transition: transform 0.2s;
+}
+
+details[open] .accordion-trigger::after {
+  content: '−';
+}
+
+.accordion-content {
+  padding: 0 0 1rem;
+  color: hsl(184, 15%, 40%);
+}
+
+.accordion-content a {
+  color: hsl(184, 77%, 34%);
+}
+
+.accordion-content a:hover {
+  text-decoration: underline;
+}
+
+.accordion-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.accordion-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+.contact-page {
+  padding: 3rem 0;
+  background-color: hsl(190, 100%, 97%);
+  min-height: 80vh;
+}
+
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+
+.breadcrumb a {
+  color: hsl(184, 15%, 40%);
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: hsl(184, 77%, 34%);
+}
+
+.breadcrumb span {
+  color: hsl(184, 15%, 40%);
+}
+
+.breadcrumb span:last-child {
+  color: hsl(195, 100%, 10%);
+  font-weight: 500;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: hsl(184, 77%, 95%);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon svg {
+  color: hsl(184, 77%, 34%);
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact-header h1 {
+    font-size: 3rem;
+  }
+}
+
+.contact-header p {
+  color: hsl(184, 15%, 40%);
+  font-size: 1.125rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.contact-form-wrapper {
+  max-width: 36rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 1px solid hsl(184, 40%, 90%);
+}
+
+@media (min-width: 768px) {
+  .contact-form-wrapper {
+    padding: 3rem;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: hsl(195, 100%, 10%);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(184, 40%, 85%);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: hsl(184, 77%, 34%);
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.btn-full {
+  width: 100%;
+  padding: 1rem;
+}
+
+.btn-full svg {
+  margin-right: 0.5rem;
+}
+
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.form-success svg {
+  color: hsl(145, 63%, 42%);
+  width: 3rem;
+  height: 3rem;
+}
+
+.form-success p {
+  color: hsl(195, 100%, 10%);
+  font-weight: 500;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 3rem;
+  color: hsl(184, 15%, 40%);
+}
+
+.contact-info a {
+  color: hsl(184, 77%, 34%);
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   404 ERROR PAGE
+   ======================================== */
+.error-page {
+  padding: 6rem 0;
+  background-color: hsl(190, 100%, 97%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 32rem;
+}
+
+.error-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: hsl(184, 77%, 34%);
+  margin-bottom: 0.5rem;
+}
+
+.error-subtitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+  margin-bottom: 1rem;
+}
+
+.error-description {
+  color: hsl(184, 15%, 40%);
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .error-actions {
+    flex-direction: row;
+  }
+}
+
+.error-actions .btn svg {
+  margin-right: 0.5rem;
+}
+
+/* ========================================
+   INSTAGRAM FEED SECTION
+   ======================================== */
+.instagram-section {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.instagram-bg {
+  position: absolute;
+  inset: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 50%;
+  opacity: 0.9;
+}
+
+.instagram-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, hsla(190, 100%, 97%, 0.6), hsla(190, 100%, 97%, 0.8));
+}
+
+.instagram-content {
+  position: relative;
+  z-index: 10;
+  max-width: 60rem;
+}
+
+.instagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.instagram-header svg {
+  color: hsl(184, 77%, 34%);
+}
+
+.instagram-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(195, 100%, 10%);
+}
+
+@media (min-width: 768px) {
+  .instagram-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.instagram-subtitle {
+  text-align: center;
+  color: hsl(184, 15%, 40%);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.instagram-post {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: hsl(184, 40%, 85%);
+}
+
+.instagram-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.instagram-post:hover img {
+  transform: scale(1.05);
+}
+
+.instagram-post-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.instagram-post:hover .instagram-post-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.instagram-post-overlay svg {
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.instagram-post:hover .instagram-post-overlay svg {
+  opacity: 1;
+}
+
+.instagram-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(184, 40%, 90%);
+}
+
+.instagram-placeholder svg {
+  color: hsl(184, 15%, 40%);
+}
+
+.instagram-cta {
+  text-align: center;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(184, 77%, 34%);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.instagram-link:hover {
+  color: hsl(184, 77%, 28%);
+}
+
+/* ========================================
+   GOOGLE ADS SECTION
+   ======================================== */
+.ads-section {
+  position: relative;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.ads-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.ads-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.ads-content {
+  position: relative;
+  z-index: 10;
+}
+
+.ads-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ads-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ad-unit {
+  min-height: 250px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ad-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.875rem;
+}

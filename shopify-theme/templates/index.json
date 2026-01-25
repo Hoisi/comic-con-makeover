@@ -185,6 +185,30 @@
         "placeholder": "Enter your email",
         "button_text": "Subscribe"
       }
+    },
+    "instagram-feed": {
+      "type": "instagram-feed",
+      "settings": {
+        "heading": "Follow Us on Instagram",
+        "subtitle": "@hydehermitstudio - Check out our latest updates and behind-the-scenes content",
+        "instagram_url": "https://instagram.com/hydehermit",
+        "button_text": "View More on Instagram"
+      },
+      "blocks": {
+        "post-1": { "type": "post", "settings": {} },
+        "post-2": { "type": "post", "settings": {} },
+        "post-3": { "type": "post", "settings": {} },
+        "post-4": { "type": "post", "settings": {} },
+        "post-5": { "type": "post", "settings": {} },
+        "post-6": { "type": "post", "settings": {} }
+      },
+      "block_order": ["post-1", "post-2", "post-3", "post-4", "post-5", "post-6"]
+    },
+    "clients": {
+      "type": "clients",
+      "settings": {
+        "title": "Clients We Work With"
+      }
     }
   },
   "order": [
@@ -193,7 +217,9 @@
     "about",
     "booth-portfolio",
     "custom-orders",
+    "clients",
     "upcoming-events",
+    "instagram-feed",
     "community",
     "newsletter"
   ]
